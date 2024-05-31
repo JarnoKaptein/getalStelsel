@@ -1,0 +1,112 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.Applet;
+
+/**
+  *
+  * Description
+  * Aantal keren ; vergeten: 2
+  *
+  * @version 1.0 from 31/05/2024
+  *
+  * Jarno Kaptein
+  * Joris Blackstone
+  *
+  * Uw beste leerlingen
+  */
+
+public class stelselsOmrekenen extends Applet {
+  // start attributes
+  private Label titelLabel = new Label();
+  private NumberField inputField = new NumberField();
+  private Button submitButton = new Button();
+  private Label outputLabel = new Label();
+  private Label label1 = new Label();
+  private Label label2 = new Label();
+  private NumberField stelselInput = new NumberField();
+  // end attributes
+  
+  public void init() {
+    Panel cp = new Panel(null);
+    cp.setBounds(0, 0, 300, 300);
+    add(cp);
+    // start components
+    
+    titelLabel.setBounds(8, 8, 275, 41);
+    titelLabel.setText("Stelsel Omrekenen");
+    titelLabel.setAlignment(Label.CENTER);
+    titelLabel.setFont(new Font("Consolas", Font.PLAIN, 24));
+    cp.add(titelLabel);
+    inputField.setBounds(168, 64, 105, 33);
+    inputField.setText("");
+    cp.add(inputField);
+    submitButton.setBounds(104, 160, 89, 25);
+    submitButton.setLabel("Reken om");
+    submitButton.addActionListener(new ActionListener() { 
+      public void actionPerformed(ActionEvent evt) { 
+        submitButton_ActionPerformed(evt);
+      }
+    });
+    cp.add(submitButton);
+    
+    outputLabel.setBounds(8, 192, 267, 57);
+    outputLabel.setText("");    
+    outputLabel.setFont(new Font("Consolas", Font.PLAIN, 12)); 
+    cp.add(outputLabel);
+    
+    label1.setBounds(8, 64, 155, 33);
+    label1.setText("Decimaal getal:");
+    cp.add(label1);
+    
+    label2.setBounds(8, 112, 156, 33);
+    label2.setText("Welk stelsel omrekenen?");
+    cp.add(label2);
+    
+    stelselInput.setBounds(168, 112, 33, 33);
+    stelselInput.setText("");
+    stelselInput.setSelectionStart(2);
+    stelselInput.setSelectionEnd(9);
+    cp.add(stelselInput);
+    // end components
+    
+  } // end of init
+  
+  // start methods
+  public void submitButton_ActionPerformed(ActionEvent evt) {
+    int decimaalGetalInput = 0;
+    int stelsel = 0;
+    
+    decimaalGetalInput = inputField.getInt();
+    stelsel = stelselInput.getInt();    
+    
+    // Van decimaal naar stelsel x:
+    //Delen door x
+    //Rest van x opslaan
+    
+    // TODO: Check sum (geen inputs, stelsel > 9, stelsel < 2
+    
+    if (stelsel<2){
+      outputLabel.setText("Vul een geldig stelsel tussen 2 en 9 in");
+    } else if (stelsel>9){
+      outputLabel.setText("Vul een geldig stelsel tussen 2 en 9 in"); 
+    } else {
+      int rest;
+      String getalOutput = "";
+      
+      while (decimaalGetalInput > 0) {
+        rest = decimaalGetalInput % stelsel;             // Slaat de rest na een deling van het aantal tallig stelsel op als variabel
+        getalOutput = rest + getalOutput;                // Voegt de rest toe aan de output string
+        decimaalGetalInput /= stelsel;                   //  /= is de afkorting van a = a / b. We delen hier door het aantal van het tallig stelsel zodat je opnieuw de lus kunt uitvoeren.
+      } // end of while, 
+      // Dit gaat door todat de input 0 is. Als de input 0 is wordt de while lus gestopt.
+      
+      //Zodra de lus klaar is word de output gegeven op het scherm.
+      
+      outputLabel.setText("Omgerekend vanuit het "+stelsel+"-tallig stelsel is "+getalOutput);       
+    } // end of if-else
+  }
+} // end of submitButton_ActionPerformed
+  
+  // end methods
+  
+// end of class BinairOmrekenen

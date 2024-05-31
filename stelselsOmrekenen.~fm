@@ -1,0 +1,149 @@
+object binairOmrekenen: TFGUIForm
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  Caption = 
+    'C:\Users\Jarno\Desktop\getalStelselOmrekenen\stelselsOmrekenen.j' +
+    'fm'
+  ClientHeight = 261
+  ClientWidth = 284
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -10
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = True
+  Position = poDesigned
+  Visible = True
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnResize = FormResize
+  FrameType = 4
+  Resizable = False
+  Undecorated = False
+  Background = clWhite
+  PixelsPerInch = 96
+  TextHeight = 13
+  object titelLabel: TALabel
+    Tag = -1
+    Left = 8
+    Top = 8
+    Width = 275
+    Height = 41
+    Hint = 'label1'
+    Foreground = clWindowText
+    Background = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Consolas'
+    Font.Style = []
+    Alignment = CENTER
+    Text = 'Stelsel Omrekenen'
+  end
+  object inputField: TANumberField
+    Tag = -21
+    Left = 168
+    Top = 64
+    Width = 105
+    Height = 33
+    Cursor = crIBeam
+    Hint = 'numberField1'
+    Foreground = 3355443
+    Background = clWhite
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Dialog'
+    Font.Style = []
+    Editable = True
+  end
+  object submitButton: TAButton
+    Tag = -4
+    Left = 104
+    Top = 160
+    Width = 89
+    Height = 25
+    Hint = 'button1'
+    Foreground = clBlack
+    Background = 15658734
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Dialog'
+    Font.Style = []
+    Text = 'Reken om'
+    actionPerformed = 'submitButton_ActionPerformed'
+  end
+  object outputLabel: TALabel
+    Tag = -1
+    Left = 8
+    Top = 192
+    Width = 267
+    Height = 57
+    Hint = 'label1'
+    Foreground = clWindowText
+    Background = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Consolas'
+    Font.Style = []
+    Alignment = LEFT
+  end
+  object label1: TALabel
+    Tag = -1
+    Left = 8
+    Top = 64
+    Width = 155
+    Height = 33
+    Hint = 'label1'
+    Foreground = 3355443
+    Background = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Dialog'
+    Font.Style = []
+    Alignment = LEFT
+    Text = 'Decimaal getal:'
+  end
+  object label2: TALabel
+    Tag = -1
+    Left = 8
+    Top = 112
+    Width = 156
+    Height = 33
+    Hint = 'label1'
+    Foreground = 3355443
+    Background = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Dialog'
+    Font.Style = []
+    Alignment = LEFT
+    Text = 'Welk stelsel omrekenen?'
+  end
+  object stelselInput: TANumberField
+    Tag = -21
+    Left = 168
+    Top = 112
+    Width = 33
+    Height = 33
+    Cursor = crIBeam
+    Hint = 'numberField1'
+    Foreground = 3355443
+    Background = clWhite
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Dialog'
+    Font.Style = []
+    Editable = True
+    SelectionEnd = 9
+    SelectionStart = 2
+  end
+end
