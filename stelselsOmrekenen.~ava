@@ -59,7 +59,7 @@ public class stelselsOmrekenen extends Applet {
     cp.add(label1);
     
     label2.setBounds(8, 112, 156, 33);
-    label2.setText("Welk stelsel omrekenen?");
+    label2.setText("Welk stelsel?");
     cp.add(label2);
     
     stelselInput.setBounds(168, 112, 33, 33);
