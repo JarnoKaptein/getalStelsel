@@ -85,9 +85,9 @@ public class stelselsOmrekenen extends Applet {
     
     // TODO: Check sum (geen inputs, stelsel > 9, stelsel < 2
     
-    if (stelsel<2){
+    if (stelsel<2) {
       outputLabel.setText("Vul een geldig stelsel tussen 2 en 9 in");
-    } else if (stelsel>9){
+    } else if (stelsel>9) {
       outputLabel.setText("Vul een geldig stelsel tussen 2 en 9 in"); 
     } else {
       int rest;
