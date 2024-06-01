@@ -9,7 +9,7 @@ Dit word uitgevoerd doormiddel van een simpel stappenplan.
 2. Delen door x
 3. Rest van x opslaan
 
-2>x>9
+Waarbij 2 > x > 9
 
 
 ## Auteurs
