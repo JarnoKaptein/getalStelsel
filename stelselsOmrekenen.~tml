@@ -7,7 +7,7 @@
 <body>
 <h1>stelselsOmrekenen-Applet</h1>
 <hr>
-<applet code="stelselsOmrekenen.class" archive="file:\\\D:\Program Files (x86)\JavaEditor\JEApplets.jar"  width="591" height="266">
+<applet code="stelselsOmrekenen.class" archive="file:\\\D:\Program Files (x86)\JavaEditor\JEApplets.jar"  width="292" height="266">
 </applet>
 <hr>
 </body>
