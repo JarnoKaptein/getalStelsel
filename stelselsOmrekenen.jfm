@@ -1,13 +1,13 @@
 object stelselsOmrekenen: TFGUIForm
-  Left = 3
-  Top = 2
+  Left = -6
+  Top = -2
   BorderIcons = [biSystemMenu]
   Caption = 
     'C:\Users\Jarno\Desktop\getalStelselOmrekenen\stelselsOmrekenen.j' +
     'fm'
   ClientHeight = 261
-  ClientWidth = 583
-  Color = clSilver
+  ClientWidth = 482
+  Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -10
@@ -24,14 +24,14 @@ object stelselsOmrekenen: TFGUIForm
   FrameType = 4
   Resizable = False
   Undecorated = False
-  Background = clSilver
+  Background = clWhite
   PixelsPerInch = 96
   TextHeight = 13
   object titelLabel: TALabel
     Tag = -1
     Left = 8
     Top = 8
-    Width = 277
+    Width = 466
     Height = 41
     Hint = 'label1'
     Foreground = clWindowText
@@ -42,13 +42,13 @@ object stelselsOmrekenen: TFGUIForm
     Font.Name = 'Consolas'
     Font.Style = []
     Alignment = CENTER
-    Text = 'Decimaal naar stelsel'
+    Text = 'Stelsel Omrekenen'
   end
-  object inputField: TANumberField
+  object getalInput: TANumberField
     Tag = -21
-    Left = 168
+    Left = 240
     Top = 64
-    Width = 105
+    Width = 233
     Height = 33
     Cursor = crIBeam
     Hint = 'numberField1'
@@ -61,11 +61,11 @@ object stelselsOmrekenen: TFGUIForm
     Font.Style = []
     Editable = True
   end
-  object submitButtonDS: TAButton
+  object stelselButton: TAButton
     Tag = -4
-    Left = 104
+    Left = 24
     Top = 160
-    Width = 89
+    Width = 193
     Height = 25
     Hint = 'button1'
     Foreground = clBlack
@@ -75,30 +75,30 @@ object stelselsOmrekenen: TFGUIForm
     Font.Height = -12
     Font.Name = 'Dialog'
     Font.Style = []
-    Text = 'Reken om'
-    actionPerformed = 'submitButtonDS_ActionPerformed'
+    Text = 'Naar stelsel'
+    actionPerformed = 'stelselButton_ActionPerformed'
   end
   object outputLabel: TALabel
     Tag = -1
     Left = 8
     Top = 192
-    Width = 275
-    Height = 57
+    Width = 467
+    Height = 49
     Hint = 'label1'
     Foreground = clWindowText
     Background = clWhite
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -14
     Font.Name = 'Consolas'
     Font.Style = []
     Alignment = LEFT
   end
-  object label1: TALabel
+  object getalLabel: TALabel
     Tag = -1
     Left = 8
     Top = 64
-    Width = 155
+    Width = 219
     Height = 33
     Hint = 'label1'
     Foreground = 3355443
@@ -109,13 +109,13 @@ object stelselsOmrekenen: TFGUIForm
     Font.Name = 'Dialog'
     Font.Style = []
     Alignment = LEFT
-    Text = 'Decimaal getal:'
+    Text = 'Getal:'
   end
-  object label2: TALabel
+  object stelselLabel: TALabel
     Tag = -1
     Left = 8
     Top = 112
-    Width = 156
+    Width = 220
     Height = 33
     Hint = 'label1'
     Foreground = 3355443
@@ -126,11 +126,11 @@ object stelselsOmrekenen: TFGUIForm
     Font.Name = 'Dialog'
     Font.Style = []
     Alignment = LEFT
-    Text = 'Naar welk stelsel?'
+    Text = 'Stelsel:'
   end
-  object stelselInputDS: TANumberField
+  object stelselInput: TANumberField
     Tag = -21
-    Left = 168
+    Left = 240
     Top = 112
     Width = 33
     Height = 33
@@ -147,98 +147,11 @@ object stelselsOmrekenen: TFGUIForm
     SelectionEnd = 9
     SelectionStart = 2
   end
-  object titelLabel1: TALabel
-    Tag = -1
-    Left = 296
-    Top = 8
-    Width = 277
-    Height = 41
-    Hint = 'label1'
-    Foreground = clWindowText
-    Background = clWhite
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -24
-    Font.Name = 'Consolas'
-    Font.Style = []
-    Alignment = CENTER
-    Text = 'Stelsel naar decimaal'
-  end
-  object label3: TALabel
-    Tag = -1
-    Left = 296
-    Top = 64
-    Width = 155
-    Height = 33
-    Hint = 'label1'
-    Foreground = 3355443
-    Background = clWhite
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'Dialog'
-    Font.Style = []
-    Alignment = LEFT
-    Text = 'Stelsel getal:'
-  end
-  object label4: TALabel
-    Tag = -1
-    Left = 295
-    Top = 112
-    Width = 156
-    Height = 33
-    Hint = 'label1'
-    Foreground = 3355443
-    Background = clWhite
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'Dialog'
-    Font.Style = []
-    Alignment = LEFT
-    Text = 'Van welk stelsel?'
-  end
-  object stelselGetalInputField: TANumberField
-    Tag = -21
-    Left = 464
-    Top = 64
-    Width = 105
-    Height = 33
-    Cursor = crIBeam
-    Hint = 'numberField1'
-    Foreground = 3355443
-    Background = clWhite
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'Dialog'
-    Font.Style = []
-    Editable = True
-  end
-  object stelselInputSD: TANumberField
-    Tag = -21
-    Left = 464
-    Top = 112
-    Width = 33
-    Height = 33
-    Cursor = crIBeam
-    Hint = 'numberField1'
-    Foreground = 3355443
-    Background = clWhite
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'Dialog'
-    Font.Style = []
-    Editable = True
-    SelectionEnd = 9
-    SelectionStart = 2
-  end
-  object submitButtonSD: TAButton
+  object decimaalButton: TAButton
     Tag = -4
-    Left = 392
+    Left = 264
     Top = 160
-    Width = 89
+    Width = 193
     Height = 25
     Hint = 'button1'
     Foreground = clBlack
@@ -248,22 +161,7 @@ object stelselsOmrekenen: TFGUIForm
     Font.Height = -12
     Font.Name = 'Dialog'
     Font.Style = []
-    Text = 'Reken om'
-  end
-  object outputLabel1: TALabel
-    Tag = -1
-    Left = 296
-    Top = 192
-    Width = 275
-    Height = 57
-    Hint = 'label1'
-    Foreground = clWindowText
-    Background = clWhite
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -12
-    Font.Name = 'Consolas'
-    Font.Style = []
-    Alignment = LEFT
+    Text = 'Naar decimaal'
+    actionPerformed = 'decimaalButton_ActionPerformed'
   end
 end
